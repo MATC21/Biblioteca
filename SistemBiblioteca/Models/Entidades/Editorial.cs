@@ -6,6 +6,6 @@ namespace SistemBiblioteca.Models.Entidades
     {
         [Required(ErrorMessage = "El campo {0} es obligatorio")]
         public int idEditorial { get; set; }
-        public string nombre { get;}
+        public string nombre { get; }
     }
 }

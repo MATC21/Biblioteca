@@ -1,4 +1,5 @@
-﻿namespace SistemBiblioteca.Models.Entidades {
+﻿namespace SistemBiblioteca.Models.Entidades
+{
     public partial class DetalleVenta
     {
         public int IdDetalleVenta { get; set; }

@@ -1,0 +1,11 @@
+﻿
+@Model List<Categoria>;
+    <h1>Categorias desde la vista parcial</h1>
+    @foreach (var categoria in Model)
+    {
+        <div>
+            <h2>Id: @categoria.idCategoria</h2>
+            <h2>Categoria: @categoria.categoria</h2>
+            <h2>Descripcion: @categoria.descripcion</h2>
+        </div>
+    }

@@ -9,7 +9,21 @@
     <link rel="stylesheet" href="~/SistemBiblioteca.styles.css" asp-append-version="true" />
 </head>
 <body>
+    <style>
+        .contimg {
+            display: flex;
+            justify-content: center; /* Alinea horizontalmente */
+            align-items: center; /* Alinea verticalmente */
+        }
+        .img{
+            height:200px;
+            border-radius:100px;
+        }
+    </style>
 <header>
+        <div class="contimg">
+            <img class="img" src="~/Utilidades/Img/Logo.png" />
+        </div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">BIBLIOTECA</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

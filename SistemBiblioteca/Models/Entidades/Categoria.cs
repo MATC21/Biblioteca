@@ -7,6 +7,6 @@ namespace SistemBiblioteca.Models.Entidades
         [Required(ErrorMessage = "El campo {0} es obligatorio")]
         public int? idCategoria { get; set; }
         public string? categoria { get; set; }
-        public string? descripcion { get; set;}
+        public string? descripcion { get; set; }
     }
 }
