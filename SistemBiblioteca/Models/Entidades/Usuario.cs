@@ -1,14 +1,25 @@
-﻿namespace SistemBiblioteca.Models.Entidades
-{
-    public class Usuario
-    {
-        public int idUsuario { get; set; }
-        public string nombreUsuario { get; set; }
-        public string cedula { get; set; }
-        public string correo { get; set; }
-        public string telefono { get; set; }
-        public string contrasena { get; set; }
+﻿using System;
+using System.Collections.Generic;
 
-        public virtual Roles IdRolesNavigation { get; set; } = null!;
-    }
+namespace SistemBiblioteca.Models.Entidades;
+
+public partial class Usuario
+{
+    public int IdUsuario { get; set; }
+
+    public int? IdRol { get; set; }
+
+    public string? NombreUsuario { get; set; }
+
+    public string? Cedula { get; set; }
+
+    public string? Correo { get; set; }
+
+    public string? Telefono { get; set; }
+
+    public string? Contasena { get; set; }
+
+    public virtual Roles? IdRolNavigation { get; set; }
+
+    public virtual ICollection<Venta> Venta { get; set; } = new List<Venta>();
 }

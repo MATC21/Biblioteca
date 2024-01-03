@@ -1,9 +1,17 @@
+using Microsoft.EntityFrameworkCore;
+using SistemBiblioteca.Models.Entidades;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+builder.Services.AddDbContext<LibreriaContext>(context =>
+{
+    context.UseSqlServer(builder.Configuration.GetConnectionString(""));
+});
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

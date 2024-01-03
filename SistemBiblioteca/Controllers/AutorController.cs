@@ -9,8 +9,8 @@ namespace SistemBiblioteca.Controllers
         {
             var autor = new Autor();
             autor.idAutor = 1;
-            autor.nombreAutor = "DASDAS";
-            autor.apellidoAutor = "HHFYH";
+            autor.nombre = "DASDAS";
+            autor.apellido = "HHFYH";
 
             return View(autor);
         }

@@ -1,12 +1,15 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
 
-namespace SistemBiblioteca.Models.Entidades
+namespace SistemBiblioteca.Models.Entidades;
+
+public partial class Categoria
 {
-    public class Categoria
-    {
-        [Required(ErrorMessage = "El campo {0} es obligatorio")]
-        public int? idCategoria { get; set; }
-        public string? categoria { get; set; }
-        public string? descripcion { get; set; }
-    }
+    public int idCategoria { get; set; }
+
+    public string? categoria { get; set; }
+
+    public string? descripcion { get; set; }
+
+    public virtual ICollection<Libro> Libros { get; set; } = new List<Libro>();
 }

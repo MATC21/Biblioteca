@@ -1,11 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
 
-namespace SistemBiblioteca.Models.Entidades
+namespace SistemBiblioteca.Models.Entidades;
+
+public partial class Editorial
 {
-    public class Editorial
-    {
-        [Required(ErrorMessage = "El campo {0} es obligatorio")]
-        public int idEditorial { get; set; }
-        public string nombre { get; }
-    }
+    public int IdEditorial { get; set; }
+
+    public string? Nombre { get; set; }
+
+    public virtual ICollection<Libro> Libros { get; set; } = new List<Libro>();
 }

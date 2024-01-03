@@ -7,15 +7,15 @@ namespace SistemBiblioteca.Controllers
     {
         public IActionResult Index()
         {
-            var listaCategoria = new List<Categoria>()
+            var listaCategoria = new List<Models.Entidades.Categoria>()
             {
-                new Categoria
+                new Models.Entidades.Categoria
                 {
                     idCategoria = 2,
                     categoria = "TERROR",
                     descripcion = "TODO SOBRE TERROR"
                 },
-                new Categoria
+                new Models.Entidades.Categoria
                 {
                     idCategoria = 3,
                     categoria = "ACCION",
