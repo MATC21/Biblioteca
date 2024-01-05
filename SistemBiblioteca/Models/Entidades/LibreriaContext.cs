@@ -15,7 +15,7 @@ public partial class LibreriaContext : DbContext
     {
     }
 
-    public virtual DbSet<Autor> Autors { get; set; }
+    public virtual DbSet<Autor> Autor { get; set; }
 
     public virtual DbSet<Categoria> Categoria { get; set; }
 

@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using SistemBiblioteca.Models.Entidades;
+using SistemBiblioteca.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,8 +11,13 @@ var app = builder.Build();
 
 builder.Services.AddDbContext<LibreriaContext>(context =>
 {
-    context.UseSqlServer(builder.Configuration.GetConnectionString(""));
+    context.UseSqlServer(builder.Configuration.GetConnectionString("CADENASQL"));
 });
+
+builder.Services.AddScoped<IServicioAutor,ServicioAutor>();
+builder.Services.AddScoped<IServicioCategoria,ServicioCategoria>();
+builder.Services.AddScoped<IServicioUsuario,ServicioUsuario>();
+builder.Services.AddScoped<IServicioLista,ServicioLista>();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
